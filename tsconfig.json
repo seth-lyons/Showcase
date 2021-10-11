@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist",
+      "allowJs": true,
+      "baseUrl": ".",
+      "downlevelIteration": true,
+      "experimentalDecorators": true,
+      "jsx": "react",
+      "lib": [ "es2015", "es6", "dom" ],
+      "module": "esnext",
+      "moduleResolution": "node",
+      "paths": {
+        "Assets/*": [ "./src/assets/*", "assets/*" ],
+        "Source/*": [ "./src/*", "src/*" ],
+      },
+      "skipDefaultLibCheck": true,
+      "sourceMap": false,
+      "strict": false,
+      "target": "es5",
+      "typeRoots": [
+        "./node_modules/@types"
+      ]
+    },
+    "exclude": [
+      "./dist/**/*",
+      "./node_modules/**/*"
+    ]
+  }
