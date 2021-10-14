@@ -6,8 +6,8 @@ module.exports = {
     mode: 'development',
     target: ['web', 'es5'],
     output: {
-        path: path.resolve(__dirname, "public/js/"),
-        publicPath: '/public/js',
+        path: path.resolve(__dirname, "public/dist/"),
+        publicPath: '/public/dist',
         filename: "bundle.js"
     },
     resolve: {
@@ -22,12 +22,12 @@ module.exports = {
         rules: [
             { test: /\.tsx?$/, loader: "ts-loader" },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-            { test: /\.(css|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
-            { test: /\.(woff|woff2|eot|ttf|svg|otf)$/, loader: 'url-loader', options: { limit: 100000 } }
+            { test: /\.(woff|woff2|eot|ttf|svg|otf)$/, loader: 'file-loader', options: { limit: 100000 } },
+            { test: /\.(css|scss)$/, use: ['style-loader', { loader: 'css-loader', options: { url: false } }, 'sass-loader'] }
         ]
     },
     devServer: {
-        devMiddleware:{
+        devMiddleware: {
             publicPath: "http://localhost:3000/",
         },
         static: [
@@ -37,5 +37,5 @@ module.exports = {
             }
         ],
         port: 3000
-      }
+    }
 };

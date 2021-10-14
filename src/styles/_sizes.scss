@@ -1,0 +1,7 @@
+//using Max and Min because calc is not yet widely supported in media queries
+$mobileMax: 400px;
+$smallMin: 401px;
+$smallMax: 680px;
+$midMin: 681px;
+$midMax: 1000px;
+$fullMin: 1001px;

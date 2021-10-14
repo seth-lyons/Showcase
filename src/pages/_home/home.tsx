@@ -1,15 +1,16 @@
 import * as React from 'react';
-import { Container, Button } from 'reactstrap';
-import './home.scss'
+import { HomeTitle } from './HomeTitle'
+import { HomeOutline } from './HomeOutline'
+import { HomeSpecs } from './HomeSpecs'
+import './Home.scss'
 
 function Home(props) {
     return (
-        <Container>
-            <div className="App">
-                <Button color="danger">Danger!</Button>
-                <h1 className="greeting"> Hello, World!! </h1>
-            </div>
-        </Container>
+        <div >
+            <HomeTitle />
+            <HomeOutline />
+            <HomeSpecs />
+        </div>
     );
 }
 

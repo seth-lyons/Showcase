@@ -1,0 +1,25 @@
+@import 'sizes';
+
+@mixin Mobile {
+    @media (max-width: $mobileMax) {
+        @content;
+    }
+}
+
+@mixin Small {
+    @media (min-width: $smallMin) and (max-width: $smallMax) {
+        @content;
+    }
+}
+
+@mixin Mid {
+    @media (min-width: $midMin) and (max-width: $midMax) {
+        @content;
+    }
+}
+
+@mixin BelowFull {
+    @media (max-width: $midMax) {
+        @content;
+    }
+}
