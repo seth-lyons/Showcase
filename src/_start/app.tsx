@@ -1,4 +1,4 @@
-//ADDING THIS AS A FEATURE BRANCH TEST
+//ADDING THIS AS A FEATURE BRANCH TEST, COMMIT 2
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 //Using HashRouter instead of BrowserRouter for GitHub Pages support
